@@ -1,0 +1,147 @@
+:root {
+  --main-color: hsl(158, 36%, 37%);
+  --sec-color: hsl(30, 38%, 92%)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 600px;
+  height: 450px;
+  margin: 60px auto;
+  border-radius: 16px;
+  background-color: white;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pic1 {
+  width: 100%;
+}
+
+.pic2 {
+  display: none;
+}
+
+
+p:first-of-type {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+p:last-of-type {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+h1 {
+  line-height: 1;
+  font-family: 'Fraunces', serif;
+}
+
+.left {
+  margin: 30px;
+}
+
+.left .price {
+  display: flex;
+  align-items: center;
+}
+
+.one {
+  color: var(--main-color);
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+  font-size: 35px;
+  margin-right: 20px;
+}
+
+.two {
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+
+button {
+  padding: 15px 80px;
+  margin-top: 30px;
+  border-radius: 12px;
+  background-color: var(--main-color);
+  color: var(--sec-color);
+  font-weight: 700;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+button::before {
+  position: absolute;
+  content: "";
+  background-image: url(images/icon-cart.svg);
+  width: 15px;
+  height: 16px;
+  left: 55px;
+}
+
+button:hover {
+  background-color: hsl(158, 39%, 29%);
+}
+
+@media (max-width:767px) {
+  .main {
+    grid-template-columns: 1fr;
+    width: 340px;
+    height: 600px;
+  }
+
+  .pic1 {
+    display: none;
+  }
+
+  .pic2 {
+    display: block;
+    width: 100%;
+  }
+
+  p:first-of-type {
+    letter-spacing: 2;
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    line-height: 1.4;
+  }
+
+  .one {
+    font-size: 30px;
+  }
+
+  button {
+    padding: 15px 100px;
+    margin-top: 10px;
+  }
+}
+
+.attribution {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
